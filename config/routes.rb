@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
 
   resources :products do
-    resources :subscribers, only: [:create]
-    resource :unsubscribe, only: [:new, :show]  # ✅ Fixed line
+    resources :subscribers, only: [ :create ]
+    resource :unsubscribe, only: [ :new, :show ]  # ✅ Fixed line
   end
 
   # Defines the root path route ("/")
