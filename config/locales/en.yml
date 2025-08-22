@@ -33,3 +33,7 @@ en:
     index:
       title: "Products"
 
+  activerecord:
+    attributes:
+      user:
+        password_challenge: "Current password"
