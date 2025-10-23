@@ -47,16 +47,3 @@ class ProductsController < ApplicationController
       params.expect(product: [ :name, :description, :featured_image, :inventory_count ])
     end
 end
-
-
-# class ProductsController < ApplicationController
-#   allow_unauthenticated_access
-
-#   def index
-#     @products = Product.all
-#   end
-
-#   def show
-#     @product = Product.find(params[:id])
-#   end
-# end
