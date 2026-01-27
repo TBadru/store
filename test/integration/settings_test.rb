@@ -34,7 +34,7 @@ test "admins can access /store/products" do
   get store_products_path
   assert_response :success
 end
-
+ 
 test "admins can access /store/users" do
   sign_in_as users(:admin)
   get store_users_path
