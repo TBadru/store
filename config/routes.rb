@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   resource :sign_up
 
-  # Products routes
-  resources :products do
-    resources :subscribers, only: [ :create ]
-    resource :unsubscribe, only: [ :new, :show ]
-  end
+# Products routes
+resources :products do
+  resource :wishlist, only: [ :create ]
+  resources :subscribers, only: [ :create ]
+  resource :unsubscribe, only: [ :new, :show ]
+end
 
-  resources :wishlists do
+    resources :wishlists do
     resources :wishlist_products, only: [ :update, :destroy ], module: :wishlists
   end
 
